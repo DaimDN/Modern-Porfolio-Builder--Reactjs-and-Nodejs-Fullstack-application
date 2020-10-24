@@ -7,7 +7,6 @@
     "start": "concurrently \"npm run server\" \"npm run client\"",
     "client": "npm start --prefix client",
     "server": "nodemon ./bin/www"
-
   },
   "author": "",
   "license": "ISC",
@@ -21,6 +20,7 @@
     "ejs": "^3.1.5",
     "express": "^4.17.1",
     "express-validator": "^6.6.1",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.10.10"
   }
 }
