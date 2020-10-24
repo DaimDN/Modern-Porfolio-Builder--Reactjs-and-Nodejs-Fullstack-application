@@ -3,3 +3,4 @@
 
 # About me 
 ### I am a full stack application developer
+#### run the script using npm run start command 
