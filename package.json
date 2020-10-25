@@ -17,7 +17,6 @@
   "dependencies": {
     "bcrypt": "^5.0.0",
     "chalk": "^4.1.0",
-    "client": "file:client",
     "concurrently": "^5.3.0",
     "config": "^3.3.2",
     "cors": "^2.8.5",
