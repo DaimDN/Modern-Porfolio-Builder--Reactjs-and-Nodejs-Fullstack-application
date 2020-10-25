@@ -11,6 +11,15 @@ app.set('view engine', 'ejs');
 
 app.use('/', require('./Routes/Routing'));
 
+if (process.env.NODE_ENV === 'production') {
+    // Set static folder
+    app.use(express.static('client/build'));
+  
+    app.get('*', (req, res) => {
+      res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+    });
+  }
+
 app.use(function(req, res, next){
     res.status(404);
     if(req.accepts('json')){
