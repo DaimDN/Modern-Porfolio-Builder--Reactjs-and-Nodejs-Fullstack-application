@@ -1,13 +1,15 @@
-import React from 'react'
-import ReactDOM from 'react-dom';
+import React, {Fragment} from 'react'
+import ReactDOM from 'react-dom'
+import Routing from './components/Routing'
 
- function Index() {
+function Home() {
     return (
-        <div>
-            <h1>Welcome</h1>
-        </div>
+        <Fragment>
+            <Routing/>
+        </Fragment>
     )
 }
 
-const Selector = document.getElementById('app');
-ReactDOM.render(<Index/>, Selector);
+const selector = document.getElementById('root');
+
+ReactDOM.render(<Home/>, selector);
