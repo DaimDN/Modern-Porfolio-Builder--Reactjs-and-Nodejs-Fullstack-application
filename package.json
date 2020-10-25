@@ -7,7 +7,8 @@
     "start": "concurrently \"npm run server\" \"npm run client\"",
     "client": "npm start --prefix client",
     "server": "nodemon ./bin/www",
-    "build" :  "npm install --prefix client && npm run build --prefix client"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
+    "build:azure": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "author": "",
   "license": "ISC",
