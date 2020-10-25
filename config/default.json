@@ -1,6 +1,6 @@
 {
     "PORT": "5000", 
-    "mongoURI" : "mongodb://localhost:27017/jobsearch",
+    "mongoURI" : "mongodb+srv://root:0995@nodejs.2j0z7.mongodb.net/jobsearch",
     "secret" : "daim",
     "accessToken": "EpvEWMHHxjGLQBU6"
 }
