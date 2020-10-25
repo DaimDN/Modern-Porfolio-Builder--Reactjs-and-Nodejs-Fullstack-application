@@ -23,7 +23,6 @@ var Logincheck =  [
 
 
 //@ All get routes
-Router.get('/', Functions.LandingPage );
 Router.get('/users', util.auth,  auth.auth);
 Router.get('/jobs', jobs.jobs );
 
