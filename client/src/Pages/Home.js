@@ -19,7 +19,7 @@ export default class HomePage extends Component {
 function Home() {
     return (
         <div>
-        <h1>this is a homepage</h1>
+        <div className="jumbotron">Welcome to Serverless App</div>
             
         </div>
     )
