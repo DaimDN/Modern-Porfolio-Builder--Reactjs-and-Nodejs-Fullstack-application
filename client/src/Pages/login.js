@@ -24,7 +24,7 @@ export default class Login extends Component {
         var url = '/login';
     
 
-        var data = {"email": email, "password": password};
+        var data = {email: email, password: password};
 
         console.log(data);
         api.post(url, data).then(

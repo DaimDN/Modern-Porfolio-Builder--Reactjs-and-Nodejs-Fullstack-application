@@ -1,11 +1,13 @@
 import React from 'react'
 import './navbar.css';
+import logo from './logo.png';
 
 export default function Navbar() {
     return (
         <div>
             <nav class="navbar navbar-expand-lg navbar-light bg-white bg-no">
-            <a class="navbar-brand " href="/">JobServe</a>
+           
+            <a class="navbar-brand " href="/"> <img className="logo" src={logo}></img></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
