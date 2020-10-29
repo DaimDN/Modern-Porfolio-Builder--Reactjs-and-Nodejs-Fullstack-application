@@ -2,10 +2,10 @@ const app = require('../app');
 const chalk = require('chalk');
 const config = require('config');
 
-const http = require('http');
+const http = require('https');
 const { type } = require('os');
 const { EACCES, EADDRINUSE } = require('constants');
-const server = http.createServer(app);
+const server = https.createServer(app);
 let port = process.env.PORT || config.get('PORT');
 server.listen(port);
 
