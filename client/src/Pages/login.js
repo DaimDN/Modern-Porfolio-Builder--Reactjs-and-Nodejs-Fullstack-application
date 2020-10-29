@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react'
 import axios from 'axios';
 import { red } from 'chalk';
 import { Redirect } from 'react-router-dom';
+import api from '../until/post';
 
 
 export default class Login extends Component {
@@ -16,27 +17,23 @@ export default class Login extends Component {
         this.renderRedirect = this.renderRedirect.bind(this);
    
     }
-
-
     LoginHandler(event){
         
         var email = this.email.value;
         var password = this.password.value;
-        var url = 'http://localhost:5000/login';
+        var url = '/login';
     
 
         var data = {"email": email, "password": password};
 
         console.log(data);
-        axios.post(url, data).then(
+        api.post(url, data).then(
             (responses)=>{
                  console.log(responses)
                  this.setState({
                      response: responses.data
                  })   
-                }
-                 
-                 )
+                })
             
             .then((error)=>{
         console.log(error);
@@ -61,10 +58,7 @@ export default class Login extends Component {
     var tab = "";
     if(this.state.response !== []){
         tab =  this.state.response.msg
-    }
-
- 
-      
+    }      
 
         return (
             <div>
@@ -81,7 +75,6 @@ export default class Login extends Component {
             <input ref={(password)=> this.password = password} type="password" className="form-control"></input>
             <br/>
             <button type="submit" className="btn btn-primary btn-lg">Login</button>
-
 
             </form>
             </div>
